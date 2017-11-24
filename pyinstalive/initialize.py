@@ -178,11 +178,11 @@ def update():
 			   exit(1)
 			elif answer[0].lower() == 'y':
 			   log("", "ENDC")
-			   log("[I] In case update fails, manually run the following command (optionally with sudo):\n", "BLUE")
+			   log("[I] In case update fails, manually run the following command (optionally with sudo):\n", "GREEN")
 			   log("    pip install git+https://github.com/notcammy/PyInstaLive.git@{} --process-dependency-links --upgrade\n".format(latest_version), "BLUE")
-			   log("[I] Starting update command in 3 seconds ...", "BLUE")
+			   log("[I] PyInstaLive will exit and start updating in 3 seconds ...", "GREEN")
 			   time.sleep(3)
-			   subprocess.call(["pip", "install", "git+https://github.com/notcammy/PyInstaLive.git@" + latest_version, "--process-dependency-links", "--upgrade"])
+			   subprocess.Popen(["pip", "install", "git+https://github.com/notcammy/PyInstaLive.git@" + latest_version, "--process-dependency-links", "--upgrade"])
 			elif answer[0].lower() == 'n':
 				log('[I] Aborting ...', "GREEN")
 				seperator("GREEN")
