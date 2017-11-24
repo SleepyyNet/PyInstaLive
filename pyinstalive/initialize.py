@@ -224,7 +224,7 @@ def run():
 		new_config()
 		sys.exit(0)
 
-	if (args.username == None and args.password == None and args.record == None and args.info == False and args.config == False and args.upgrade == False) or (args.info != False):
+	if (args.username == None and args.password == None and args.record == None and args.info == False and args.config == False and args.update == False) or (args.info != False):
 		show_info()
 		sys.exit(0)
 
