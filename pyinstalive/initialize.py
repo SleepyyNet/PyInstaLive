@@ -16,7 +16,7 @@ try:
 except ImportError:
 	from urllib2 import urlopen
 
-script_version = "2.2.9_testing"
+script_version = "2.2.9"
 python_version = sys.version.split(' ')[0]
 bool_values = {'True', 'False'}
 
